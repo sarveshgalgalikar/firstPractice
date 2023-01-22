@@ -2,7 +2,7 @@ package challenges.classics;
 
 import static java.lang.System.*;
 
-//Comment22
+//CommentNew
 
 public class ReverseString {
 
