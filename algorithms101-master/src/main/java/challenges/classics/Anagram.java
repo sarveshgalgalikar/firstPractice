@@ -10,8 +10,8 @@ import java.util.*;
 public class Anagram {
     public static void main (String args[]){
         String str1 = "Sarvesh";
-        String str2 = "Varsseh";
-        //System.out.println(isAnagram2(str1,str2));
+        String str2 = "varsseh";
+        System.out.println(isAnagram2(str1,str2));
         System.out.println(isAnagram2(str1,str2));
         System.out.println(isAnagram3(str1,str2));
 
@@ -26,7 +26,7 @@ public class Anagram {
         // Compare letters and frequency of characters in Maps
         return map1.equals(map2);
     }
-
+/**
          private static HashMap<String, Integer> map(String text) {
             HashMap<String, Integer> map = new HashMap<String, Integer>();
             char[] chars = text.toCharArray();
@@ -43,6 +43,23 @@ public class Anagram {
             }
         return map;
     }
+**/
+
+    private static HashMap<String, Integer> map(String text) {
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        // Loop through and build the map one letter at a time...
+        for (int i=0; i < text.length(); i++) {
+            char c = text.toLowerCase().charAt(i);
+            // if we already have, just increment
+            if (map.containsKey(c)) {
+                map.put(String.valueOf(c), map.get(c) + 1);
+            } else { // else add
+                map.put(String.valueOf(c), 1);
+            }
+        }
+        return map;
+    }
+
 
     //this is second way of identifying the anagram
     public static boolean isAnagram2(String text1, String text2) {
