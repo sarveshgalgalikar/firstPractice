@@ -7,7 +7,7 @@ import static java.lang.System.*;
 public class ReverseString {
 
     public static void main(String[] args){
-        String str = "This is Sarvesh Galgalikar";
+        String str = "This is Sarvesh Galgalikar and ";
         reversedStringInplace(str);
         reversedStringWords(str);
         reverseStringUsingStringBuilder(str);
