@@ -4,6 +4,7 @@ public class ClosestPalindrome {
     public static void main(String[] args){
         System.out.println(nearestPalindromic("54"));
     }
+
     public static String nearestPalindromic(String n) {
 
         int s = Integer.parseInt(n);
